@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    style="@style/application_bg"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.HomeFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        style="@style/application_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Widget.Material3.AppBarLayout">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar_layout"
+            style="@style/application_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@color/design_default_color_on_primary"
+            app:expandedTitleTextAppearance="@android:color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                style="@style/application_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    style="@style/application_bg"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/top_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/person_icon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:src="@drawable/baseline_person_24"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_margin="5dp"
+                        android:layout_width="40dp"
+                        android:padding="2dp"
+                        style="@style/person_iv_style"
+                        android:layout_height="40dp">
+                    </de.hdodenhof.circleimageview.CircleImageView>
+
+
+                    <TextView
+                        style="@style/textStyle"
+                        android:text="Hello, Gaffar"
+                        android:id="@+id/person_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_marginStart="5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/person_icon"
+                        app:layout_constraintBottom_toBottomOf="@id/person_icon"
+                        tools:ignore="HardcodedText">
+                    </TextView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <ImageView
+                    style="@style/application_bg"
+                    android:layout_marginTop="25dp"
+                    android:id="@+id/daily_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:src="@drawable/dalynews"
+                    app:layout_constraintTop_toBottomOf="@+id/top_layout"
+                    tools:layout_editor_absoluteX="0dp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_margin="10dp"
+                    style="@style/application_bg"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/daily_text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/under_daily"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:id="@+id/filters_iv"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:src="@drawable/filtre"
+                        android:layout_width="27dp"
+                        android:layout_height="27dp">
+                    </androidx.constraintlayout.utils.widget.ImageFilterView>
+
+                    <TextView
+                        android:gravity="center"
+                        android:textColor="#777777"
+                        android:background="#00000000"
+                        app:layout_constraintTop_toTopOf="@+id/filters_iv"
+                        app:layout_constraintBottom_toBottomOf="@+id/filters_iv"
+                        app:layout_constraintStart_toEndOf="@+id/filters_iv"
+                        android:layout_marginStart="8dp"
+                        android:textSize="18sp"
+                        android:text="Filters"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_margin="10dp"
+                    style="@style/application_bg"
+                    app:layout_constraintTop_toBottomOf="@id/under_daily"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/tab_layout_constraint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_marginStart="10dp"
+                        android:visibility="invisible"
+                        android:id="@+id/searchView"
+                        android:hint="Search..."
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/search_icon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText"/>
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        style="@style/search_item_bg"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:id="@+id/search_icon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"/>
+                    <ImageView
+                        android:id="@+id/dismiss_iv"
+                        style="@style/application_bg"
+                        android:src="@drawable/baseline_close_24"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+                    <com.google.android.material.tabs.TabLayout
+                        app:tabMode="scrollable"
+                        style="@style/application_bg"
+                        app:layout_constraintStart_toEndOf="@+id/search_icon"
+                        android:layout_marginStart="5dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:id="@+id/tab_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        style="@style/application_bg"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/application_bg"
+            android:id="@+id/newsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            style="@style/up_button_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="15dp"
+            android:id="@+id/fab"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+

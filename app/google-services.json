@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "660676124375",
+    "project_id": "newsgo-1a8fb",
+    "storage_bucket": "newsgo-1a8fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:660676124375:android:a89365ba1c0c5b46655a92",
+        "android_client_info": {
+          "package_name": "com.gaffaryucel.newsgo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDReCplZmCXLQhRakABxPlDWjRxSEXNMnk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

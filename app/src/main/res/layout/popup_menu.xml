@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#2B2B2B">
+
+    <EditText
+        android:hint="search..."
+        android:id="@+id/query_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:padding="16dp"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:layout_marginStart="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/from_date_text_view"
+            android:layout_width="180dp"
+            android:singleLine="true"
+            android:layout_height="wrap_content"
+            android:text="Select From Date : "
+            android:textSize="18dp"/>
+        <Button
+            android:id="@+id/from_date_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/calendar"
+            android:textSize="18sp"
+            android:padding="16dp"/>
+
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/sort_by_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:entries="@array/sort_by_options" />
+
+    <Spinner
+        android:id="@+id/source_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:entries="@array/sources_array" />
+
+    <Button
+        android:text="Search"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/confirm_button"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

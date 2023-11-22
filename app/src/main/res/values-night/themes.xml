@@ -1,0 +1,63 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.NewsGo" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+    <style name="Theme.NewsGo" parent="Base.Theme.NewsGo" >
+        <item name="android:statusBarColor">@android:color/black</item>
+    </style>
+    <style name="application_bg" parent="android:TextAppearance">
+        <item name="android:background">#000000</item>
+    </style>
+    <style name="menu_bg">
+        <item name="android:background">@drawable/person_iv_bg_night</item>
+        <item name="android:src">@drawable/baseline_menu_24</item>
+    </style>
+    <style name="search_item_bg">
+        <item name="android:src">@drawable/search_night</item>
+    </style>
+    <style name="person_iv_style">
+        <item name="android:background">@drawable/person_iv_bg_night</item>
+    </style>
+    <style name="textStyle" parent="android:TextAppearance">
+        <item name="android:textColor">#CECDCD</item>
+        <item name="android:background">#00000000</item>
+    </style>
+    <style name="news_description_bg_style">
+        <item name="android:background">#96000000</item>
+    </style>
+    <style name="titleStyle" parent="android:TextAppearance">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="descriptionStyle" parent="android:TextAppearance">
+        <item name="android:textColor">#DBD9D9</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="saved_news_title_style" parent="android:TextAppearance">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">#201F1F</item>
+    </style>
+
+    <style name="saved_news_description_style" parent="android:TextAppearance">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:background">#201F1F</item>
+    </style>
+
+
+    <style name="saved_news_layout_style">
+        <item name="android:background">#201F1F</item>
+    </style>
+
+    <style name="cardView_bg" parent="android:TextAppearance">
+        <item name="android:background">#77777777</item>
+    </style>
+    <style name="up_button_bg">
+        <item name="android:src">@drawable/up</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sort_by_options">
+        <item>select</item>
+        <item>popularity</item>
+        <item>published-at</item>
+        <item>relevancy</item>
+    </string-array>
+    <string-array name="sources_array">
+        <item>select</item>
+        <item>bbc-news</item>
+        <item>cnn</item>
+    </string-array>
+</resources>

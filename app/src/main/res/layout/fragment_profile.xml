@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="user"
+            type="com.gaffaryucel.newsgo.model.UserProfile" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            style="@style/application_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".view.ProfileFragment">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/Widget.Material3.AppBarLayout">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    app:contentScrim="?attr/colorPrimary"
+                    app:expandedTitleTextAppearance="@android:color/transparent"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        app:layout_collapseMode="pin"
+                        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:background="#77777777"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/collapsing_toolbar_user_info_layout"
+                            android:layout_marginBottom="20dp"
+                            android:background="@android:color/transparent"
+                            android:orientation="vertical"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            >
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_gravity="center"
+                                android:background="@drawable/person_iv_bg_light"
+                                android:padding="18dp"
+                                android:src="@drawable/baseline_person_24"
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"/>
+
+                            <TextView
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textAlignment="center"
+                                android:background="@android:color/transparent"
+                                android:id="@+id/user_name_tv"
+                                android:layout_marginTop="8dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:maxLines="1"
+                                android:text="@{user.username}"
+                                tools:ignore="HardcodedText" />
+
+
+                            <TextView
+                                android:layout_gravity="center"
+                                android:textAlignment="center"
+                                android:background="@android:color/transparent"
+                                android:id="@+id/user_mail_tv"
+                                android:layout_marginTop="4dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:maxLines="1"
+                                tools:ignore="HardcodedText" />
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_anchor="@id/app_bar"
+                android:src="@drawable/baseline_edit_24"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_anchorGravity="top|end"/>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/go_back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_anchor="@id/app_bar"
+                app:layout_anchorGravity="bottom|center">
+
+                <TextView
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:id="@+id/empty_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/empty_tv"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:id="@+id/empty_tv_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+                <Button
+                    android:id="@+id/go_back"
+                    android:background="@drawable/material_button_bg"
+                    android:layout_width="250dp"
+                    android:layout_height="60dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/back_iv"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/new_back"
+                    app:layout_constraintEnd_toEndOf="@+id/empty_tv_2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:text="Back To Home"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@+id/back_iv"
+                    app:layout_constraintTop_toTopOf="@+id/back_iv"
+                    app:layout_constraintBottom_toBottomOf="@+id/back_iv"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="30dp"
+                style="@style/application_bg"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/saved_news_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:visibility="invisible"
+            style="@style/up_button_bg"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="10dp"
+            android:id="@+id/profile_photo_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:visibility="invisible"
+            android:text="gaffar yücel"
+            app:layout_constraintTop_toTopOf="@+id/profile_photo_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/profile_photo_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:id="@+id/collapsed_name_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText,SpUsage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

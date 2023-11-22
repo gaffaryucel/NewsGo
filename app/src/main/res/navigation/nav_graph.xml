@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.gaffaryucel.newsgo.view.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_newsDetailsFragment"
+            app:destination="@id/newsDetailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsDetailsFragment"
+        tools:layout="@layout/fragment_news_details"
+        android:name="com.gaffaryucel.newsgo.view.NewsDetailsFragment"
+        android:label="NewsDetailsFragment" >
+        <argument
+            android:name="author"
+            app:argType="string" />
+        <argument
+            android:name="content"
+            app:argType="string" />
+        <argument
+            android:name="description"
+            app:argType="string" />
+
+        <argument
+            android:name="publishedAt"
+            app:argType="string" />
+        <argument
+            android:name="source"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="url"
+            app:argType="string" />
+        <argument
+            android:name="urlToImage"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.gaffaryucel.newsgo.view.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_newsDetailsFragment"
+            app:destination="@id/newsDetailsFragment" />
+    </fragment>
+</navigation>
